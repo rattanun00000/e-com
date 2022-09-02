@@ -1,4 +1,4 @@
-import { Search, ShoppingCartOutlined } from '@mui/icons-material';
+import { ShoppingCartOutlined } from '@mui/icons-material';
 import { Badge } from '@mui/material';
 import React from 'react';
 import styled from 'styled-components';
@@ -24,37 +24,13 @@ const Left = styled.div`
   align-items: center;
 `;
 
-const Language = styled.span`
-  cursor: pointer;
-  font-size: 14px;
-  ${mobile({ display: 'none' })}
-`;
-
-const SearchContainer = styled.div`
-  border: 1px solid lightgray;
-  display: flex;
-  align-items: center;
-  margin-left: 25px;
-  padding: 5px;
-`;
-
-const Input = styled.input`
-  border: none;
-  ${mobile({ width: '50px' })}
-`;
-
-const Center = styled.div`
-  flex: 1;
-  text-align: center;
-  justify-content: center;
-`;
 const Logo = styled.h1`
   font-weight: bold;
 
   &:hover {
     transform: scale(1.02);
   }
-  ${mobile({ fontSize: '20px', marginLeft: '10px' })}
+  ${mobile({ fontSize: '24px', marginLeft: '10px' })}
 `;
 
 const Right = styled.div`
@@ -62,7 +38,7 @@ const Right = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  ${mobile({ flex: 2, justifyContent: 'center' })}
+  ${mobile({ flex: 1, marginRight: '10px' })}
 `;
 const MenuItem = styled.div`
   font-size: 14px;
@@ -80,17 +56,9 @@ const Navbar = () => {
     <Container>
       <Wrapper>
         <Left>
-          <Language>EN</Language>
-          <SearchContainer>
-            <Input placeholder="Search" />
-            <Search style={{ color: 'gray', fontSize: 16 }} />
-          </SearchContainer>
+          <Logo>SHOPSHOP</Logo>
         </Left>
-        <Link to="/" style={{ textDecoration: 'none', color: '#000' }}>
-          <Center>
-            <Logo>SHOPSHOP</Logo>
-          </Center>
-        </Link>
+        <Link to="/" style={{ textDecoration: 'none', color: '#000' }}></Link>
         <Right>
           <Link
             to="/register"
